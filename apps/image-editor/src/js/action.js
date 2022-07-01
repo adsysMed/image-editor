@@ -159,8 +159,9 @@ export default {
             }
             saveAs(blob, imageName); // eslint-disable-line
           } else {
-            w = window.open();
-            w.document.body.innerHTML = `<img src='${dataURL}'>`;
+            console.log('testsetsetset!!!!!!!!!!', dataURL)
+            // w = window.open();
+            // w.document.body.innerHTML = `<img src='${dataURL}'>`;
           }
         },
         history: (event) => {
