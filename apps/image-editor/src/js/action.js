@@ -160,6 +160,7 @@ export default {
             saveAs(blob, imageName); // eslint-disable-line
           } else {
             const link = document.createElement('a');
+            link.download = 'new.jpg';
             link.href = dataURL;
             document.body.appendChild(link);
             link.click();
