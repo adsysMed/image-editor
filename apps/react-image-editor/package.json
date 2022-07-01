@@ -1,6 +1,6 @@
 {
   "name": "adsys-react-image-editor",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Adsys custom TOAST UI Image-Editor for React",
   "main": "dist/toastui-react-image-editor.js",
   "files": [
