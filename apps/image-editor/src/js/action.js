@@ -149,7 +149,7 @@ export default {
         download: () => {
           const dataURL = this.toDataURL();
           let imageName = this.getImageName();
-          let blob, type, w;
+          let blob, type;
 
           if (isSupportFileApi() && window.saveAs) {
             blob = base64ToBlob(dataURL);
@@ -159,9 +159,11 @@ export default {
             }
             saveAs(blob, imageName); // eslint-disable-line
           } else {
-            console.log('testsetsetset!!!!!!!!!!', dataURL)
-            // w = window.open();
-            // w.document.body.innerHTML = `<img src='${dataURL}'>`;
+            const link = document.createElement('a');
+            link.href = dataURL;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
           }
         },
         history: (event) => {

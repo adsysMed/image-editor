@@ -336,10 +336,8 @@ $btnDownload.on('click', function () {
     saveAs(blob, imageName); // eslint-disable-line
   } else {
     alert('This browser needs a file-server');
-    console.log('testsetsetset22222222222!!!!!!!!!!', dataURL)
-    
-    // w = window.open();
-    // w.document.body.innerHTML = '<img src=' + dataURL + '>';
+    w = window.open();
+    w.document.body.innerHTML = '<img src=' + dataURL + '>';
   }
 });
 
